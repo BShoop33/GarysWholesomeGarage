@@ -1,9 +1,26 @@
+using System;
+
 public class Ram : Vehicle  // Gas powered truck
 {
     public double FuelCapacity { get; set; }
-
-    public void RefuelTank()
+    public override void Drive()
     {
-        // method definition omitted
+        Console.WriteLine("The Silver Ram growls past. Rrrrrrruuummmmbbbble!");
+    }
+
+    public override void Turn()
+    {
+        Console.WriteLine("The vehicle carefully turns right");
+    }
+
+    public override void Stop()
+    {
+        Console.WriteLine("The vehicle gently rolls to a stop!\n");
+    }
+
+
+    public override void RefuelTank()
+    {
+        Console.WriteLine("");
     }
 }

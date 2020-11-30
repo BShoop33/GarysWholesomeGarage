@@ -5,8 +5,29 @@ public class Vehicle
     public string MainColor { get; set; }
     public string MaximumOccupancy { get; set; }
 
-     public virtual void Drive()
+    public virtual void Drive()
     {
-        Console.WriteLine("Vrooom!");
+        Console.WriteLine("Basic Drive");
     }
+
+    public virtual void Turn ()
+    {
+        Console.WriteLine("Basic Turn");
+    }
+
+    public virtual void Stop ()
+    {
+        Console.WriteLine("Basic Stop");
+    }
+
+    public virtual void RefuelTank()
+    {
+        Console.WriteLine("20 Gallons");
+    }
+
+    public virtual void ChargeBattery()
+    {
+        Console.WriteLine("110kWh");
+    }
+
 }
