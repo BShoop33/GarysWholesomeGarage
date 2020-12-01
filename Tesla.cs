@@ -4,18 +4,12 @@ public class Tesla : Vehicle, IElectricVehicle  // Electric car
 {
     public double BatteryKWh { get; set; }
   
-    public double CurrentChargePercentage { get; } = 74.2;
+    public double CurrentChargePercentage { get; } = 99.3;
 
     public void ChargeBattery()
     {
-       Console.WriteLine("Battery Charged to 100%");
+       Console.WriteLine("Tesla battery charged to 100%");
     }
-
-    
-
-
-
-
 
     public override void Drive()
     {
