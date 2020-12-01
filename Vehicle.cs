@@ -24,10 +24,4 @@ public class Vehicle
     {
         Console.WriteLine("20 Gallons");
     }
-
-    public virtual void ChargeBattery()
-    {
-        Console.WriteLine("110kWh");
-    }
-
 }

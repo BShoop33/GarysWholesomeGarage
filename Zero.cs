@@ -1,9 +1,19 @@
 using System;
 
-public class Zero : Vehicle  // Electric motorcycle
+public class Zero : Vehicle, IElectricVehicle  // Electric motorcycle
 {
     public double BatteryKWh { get; set; }
     
+    public double CurrentChargePercentage { get; } = 42.6;
+
+    public void ChargeBattery()
+    {
+        Console.WriteLine("Battery Charged to 100%");
+    }
+    
+    
+
+
     public override void Drive()
     {
         Console.WriteLine($"The {MainColor} Zero zips by you! Yeeeeeoooooowwww!");
@@ -18,17 +28,4 @@ public class Zero : Vehicle  // Electric motorcycle
     {
         Console.WriteLine("The vehicle gently rolls to a stop!\n");
     }
-
-
-
-
-
-
-
-    public override void ChargeBattery()
-    {
-        Console.WriteLine("60kWH");
-    }
-
-    
 }

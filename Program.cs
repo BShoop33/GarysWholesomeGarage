@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace GarysWholesomeGarage
 {
@@ -6,32 +7,88 @@ namespace GarysWholesomeGarage
     {
         static void Main(string[] args)
         {
-            Tesla myTesla = new Tesla();
-            Ram myRam = new Ram();
-            Cessna myCessna = new Cessna();
-            Zero myZero = new Zero();
+            Zero fxs = new Zero();
+            Zero fx = new Zero();
+            Tesla modelS = new Tesla();
 
-            myZero.MainColor = "Midnight Blue";
-            myZero.Drive();
-            myZero.Turn();
-            myZero.Stop();
+            List<IElectricVehicle> electricVehicles = new List<IElectricVehicle>() {
+                fx, fxs, modelS
+            };
             
-            myZero.MainColor = "Black";
-            myZero.Drive();
-            myZero.Turn();
-            myZero.Stop();
+            Console.WriteLine("Electric Vehicles");
+            foreach(IElectricVehicle ev in electricVehicles)
+            {
+                Console.WriteLine($"{ev.CurrentChargePercentage}");
+            }
 
-            myTesla.Drive();
-            myTesla.Turn();
-            myTesla.Stop();
+            foreach(IElectricVehicle ev in electricVehicles)
+            {
+                // This should charge the vehicle to 100%
+                ev.ChargeBattery();
+            }
 
-            myRam.Drive();
-            myRam.Turn();
-            myRam.Stop();
+            foreach(IElectricVehicle ev in electricVehicles)
+            {
+                Console.WriteLine($"{ev.CurrentChargePercentage}");
+            }
 
-            myCessna.Drive();
-            myCessna.Turn();
-            myCessna.Stop();
+            /***********************************************/
+
+            // Ram ram = new Ram ();
+            // Cessna cessna150 = new Cessna ();
+
+            // List<???> gasVehicles = new List<???>() {
+            //     ram, cessna150
+            // };
+
+            // Console.WriteLine("Gas Vehicles");
+            // foreach(??? gv in gasVehicles)
+            // {
+            //     Console.WriteLine($"{gv.CurrentTankPercentage}");
+            // }
+
+            // foreach(??? gv in gasVehicles)
+            // {
+            //     // This should completely refuel the gas tank
+            //     gv.RefuelTank();
+            // }
+
+            // foreach(??? gv in gasVehicles)
+            // {
+            //     Console.WriteLine($"{gv.CurrentTankPercentage}");
+            // }
+
+
         }
+
+        // static void Main(string[] args)
+        // {
+        //     Tesla myTesla = new Tesla();
+        //     Ram myRam = new Ram();
+        //     Cessna myCessna = new Cessna();
+        //     Zero myZero = new Zero();
+
+        //     myZero.MainColor = "Midnight Blue";
+        //     myZero.Drive();
+        //     myZero.Turn();
+        //     myZero.Stop();
+
+        //     myZero.MainColor = "Black";
+        //     myZero.Drive();
+        //     myZero.Turn();
+        //     myZero.Stop();
+
+        //     myTesla.Drive();
+        //     myTesla.Turn();
+        //     myTesla.Stop();
+
+        //     myRam.Drive();
+        //     myRam.Turn();
+        //     myRam.Stop();
+
+        //     myCessna.Drive();
+        //     myCessna.Turn();
+        //     myCessna.Stop();
+        // }
     }
 }
