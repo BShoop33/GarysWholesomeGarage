@@ -3,6 +3,27 @@ using System;
 public class Ram : Vehicle  // Gas powered truck
 {
     public double FuelCapacity { get; set; }
+
+    public override void RefuelTank()
+    {
+       
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public override void Drive()
     {
         Console.WriteLine("The Silver Ram growls past. Rrrrrrruuummmmbbbble!");
@@ -16,11 +37,5 @@ public class Ram : Vehicle  // Gas powered truck
     public override void Stop()
     {
         Console.WriteLine("The vehicle gently rolls to a stop!\n");
-    }
-
-
-    public override void RefuelTank()
-    {
-        Console.WriteLine("");
     }
 }
