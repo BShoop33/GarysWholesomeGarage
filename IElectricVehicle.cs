@@ -1,6 +1,8 @@
 public interface IElectricVehicle
 {
-    double CurrentChargePercentage { get; }
-    void ChargeBattery();
+    double BatteryKWh { get; set; }
 
+    double CurrentChargePercentage { get; }
+
+    void ChargeBattery();
 }

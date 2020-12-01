@@ -4,15 +4,12 @@ public class Zero : Vehicle, IElectricVehicle  // Electric motorcycle
 {
     public double BatteryKWh { get; set; }
     
-    public double CurrentChargePercentage { get; } = 42.6;
+    public double CurrentChargePercentage { get; } = 99.8;
 
     public void ChargeBattery()
     {
-        Console.WriteLine("Battery Charged to 100%");
+        Console.WriteLine("Zero battery charged to 100%");
     }
-    
-    
-
 
     public override void Drive()
     {

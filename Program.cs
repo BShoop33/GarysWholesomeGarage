@@ -15,10 +15,10 @@ namespace GarysWholesomeGarage
                 fx, fxs, modelS
             };
             
-            Console.WriteLine("Electric Vehicles");
+            Console.WriteLine("\nElectric Vehicles\n--------------------");
             foreach(IElectricVehicle ev in electricVehicles)
             {
-                Console.WriteLine($"{ev.CurrentChargePercentage}");
+                Console.WriteLine($"Charge is at {ev.CurrentChargePercentage}%");
             }
 
             foreach(IElectricVehicle ev in electricVehicles)
@@ -29,36 +29,35 @@ namespace GarysWholesomeGarage
 
             foreach(IElectricVehicle ev in electricVehicles)
             {
-                Console.WriteLine($"{ev.CurrentChargePercentage}");
+                Console.WriteLine($"Charge is at {ev.CurrentChargePercentage}%");
             }
 
             /***********************************************/
+            Console.WriteLine("\n------------------------------------------\n");
+            
+            Ram ram = new Ram ();
+            Cessna cessna150 = new Cessna ();
 
-            // Ram ram = new Ram ();
-            // Cessna cessna150 = new Cessna ();
+            List<IIceVehicles> gasVehicles = new List<IIceVehicles>() {
+                ram, cessna150
+            };
 
-            // List<???> gasVehicles = new List<???>() {
-            //     ram, cessna150
-            // };
+            Console.WriteLine("Gas Vehicles\n--------------------");
+            foreach(IIceVehicles gv in gasVehicles)
+            {
+                Console.WriteLine($"Fuel tank is at {gv.CurrentTankPercentage}%");
+            }
 
-            // Console.WriteLine("Gas Vehicles");
-            // foreach(??? gv in gasVehicles)
-            // {
-            //     Console.WriteLine($"{gv.CurrentTankPercentage}");
-            // }
+            foreach(IIceVehicles gv in gasVehicles)
+            {
+                // This should completely refuel the gas tank
+                gv.RefuelTank();
+            }
 
-            // foreach(??? gv in gasVehicles)
-            // {
-            //     // This should completely refuel the gas tank
-            //     gv.RefuelTank();
-            // }
-
-            // foreach(??? gv in gasVehicles)
-            // {
-            //     Console.WriteLine($"{gv.CurrentTankPercentage}");
-            // }
-
-
+            foreach(IIceVehicles gv in gasVehicles)
+            {
+                Console.WriteLine($"Fuel tank is at {gv.CurrentTankPercentage}%");
+            }
         }
 
         // static void Main(string[] args)

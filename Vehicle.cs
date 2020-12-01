@@ -19,9 +19,4 @@ public class Vehicle
     {
         Console.WriteLine("Basic Stop");
     }
-
-    public virtual void RefuelTank()
-    {
-        Console.WriteLine("20 Gallons");
-    }
 }
